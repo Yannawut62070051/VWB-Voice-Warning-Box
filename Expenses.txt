@@ -2,22 +2,3 @@ Expenses
     1. Arduino Starter Kit UNO R3 mini Breadboard  280 Bath
     2. playsound Module 100 Bath
     3. Sound Microphone Sensor Detection Module KY-037 75 Bath
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
