@@ -1,0 +1,25 @@
+Arduino KY-037 Sensitive microphone sensor module
+
+High-sensitivity microphone sensor module
+
+Sound Sensor Module (with Analog & Digital Outputs)
+
+Microphone sound detection module
+
+For sound detection Module has two outputs:
+
+AO, analog output, real-time output voltage signal of the microphone
+
+DO, when the sound intensity reaches a certain threshold, the output high and low signal
+
+The threshold-sensitivity can be adjusted via potentiometer on the sensor
+
+Connecting to the Arduino
+
+Pin + to Arduino 5+
+
+Pin - to Arduino -
+
+Pin A0 to Arduino A0 (for analog program)
+
+Pin D0 to Arduino 13 (for digital program)
