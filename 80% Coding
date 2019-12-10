@@ -1,0 +1,16 @@
+int piezoPin = 8; //กำหนดพอร์ต output
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Start Sound Detect");
+}
+
+void loop() {
+  int mic = analogRead(A0);
+  //Serial.println(mic); // แสดงระดับความดัง
+  if (mic > 30) { // ถ้าดังเกินกว่า 750 ให้แสดงข้อความ
+    Serial.println("Please Be quiet");
+    delay(50);
+    //ส่งเสียงเตือน
+    tone(piezoPin, 1000, 500);
+    delay(1000);
+  }
