@@ -1,0 +1,3 @@
+Place the piezo buzzer into the breadboard, so that the two leads are on two separate rows.
+Using jumper wires, connect the positive lead to Arduino digital pin 8.  The case of the buzzer may have a positive sign (+) on it to indicate the positive lead (if not, then the red wire usually indicates the positive lead).
+Connect the other lead to the 100 ohm resistor, and then to ground.
