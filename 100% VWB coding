@@ -1,13 +1,15 @@
-#include <SD.h> 
-#include <TMRpcm.h>
-#define SD_ChipSelectPin 4
-TMRpcm tmrpcm;
+// ส่วนในการกำหนด board arduino
+#include <SD.h> // เพิ่ม library รับ SD card
+#include <TMRpcm.h> // เพิ่ม library 
+#define SD_ChipSelectPin 4 // กำหนดช่องอ่าน SD card
+TMRpcm tmrpcm; // กำหนดไฟล์เสียงให้กับลำโพง ouput
+// ส่วนของการกำหนดค่าก่อนเริ่มทำงาน
 void setup(){
   Serial.begin(9600);
-  tmrpcm.speakerPin = 9;
-  if (!SD.begin(SD_ChipSelectPin)) { 
+  tmrpcm.speakerPin = 9; // กำหนดช่อง output เพื่อต่อกับลำโพง
+  if (!SD.begin(SD_ChipSelectPin)) { // ตรวจสอบว่า sd card พร้อมหรือไม่
     
-    return;
+    return; // ถ้าไม่พร้อมจะไม่ทำงานต่อ
   }
 }
 // ส่วนของการทำงานหลักของ board Arduino
