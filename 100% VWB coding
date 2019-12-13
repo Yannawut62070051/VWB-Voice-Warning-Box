@@ -14,12 +14,12 @@ void setup(){
 }
 // ส่วนของการทำงานหลักของ board Arduino
 void loop(){
-  int mic = analogRead(A0); 
-  if (mic > 75) { 
-    Serial.println("Please Be quiet");
-    delay(50);
-    tmrpcm.setVolume(6);
-    tmrpcm.play("1.wav");
-    delay(1000);
+  int mic = analogRead(A0); //กำหนดช่องในการ input ความดังของเสียง 
+  if (mic > 75) { // ถ้าดังเกินกว่า 75 dB ให้แสดงข้อความ
+    Serial.println("Please Be quiet"); // แสดงผลผ่าน display ของ software arduino เพื่อตรวจสอบว่าใช้งานได้หรือไม่
+    delay(50); // กำหนดดีเลย์ในการแสดงผลเป็นหน่วย 50 millisec
+    tmrpcm.setVolume(6); // กำหนดความดังของการแสดงผลผ่านลำโพง
+    tmrpcm.play("1.wav"); // เล่นไฟล์เสียงที่ได้ใส่ไว้ใน SD card ต้องเป็นสกุล .wav เท่านั้น
+    delay(1000); // กำหนดดีเลย์ในการแสดงผลเป็นหน่วย 1 second
   }
 }
