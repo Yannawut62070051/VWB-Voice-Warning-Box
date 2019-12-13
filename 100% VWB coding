@@ -1,0 +1,23 @@
+#include <SD.h> 
+#include <TMRpcm.h>
+#define SD_ChipSelectPin 4
+TMRpcm tmrpcm;
+void setup(){
+  Serial.begin(9600);
+  tmrpcm.speakerPin = 9;
+  if (!SD.begin(SD_ChipSelectPin)) { 
+    
+    return;
+  }
+}
+// ส่วนของการทำงานหลักของ board Arduino
+void loop(){
+  int mic = analogRead(A0); 
+  if (mic > 75) { 
+    Serial.println("Please Be quiet");
+    delay(50);
+    tmrpcm.setVolume(6);
+    tmrpcm.play("1.wav");
+    delay(1000);
+  }
+}
