@@ -1,6 +1,3 @@
-// VCC - 3.3-5V
-// GND - GND
-// OUT - A0
 void setup() {
   Serial.begin(9600);
   Serial.println("Start Sound Detect");
@@ -9,8 +6,8 @@ void setup() {
 void loop() {
   int mic = analogRead(A0);
   //Serial.println(mic); // แสดงระดับความดัง
-  if (mic > 750) { // ถ้าดังเกินกว่า 750 ให้แสดงข้อความ
-    Serial.println("ArduinoAll Click");
+  if (mic > 75) { // ถ้าดังเกินกว่า 75 dB ให้แสดงข้อความ
+    Serial.println("Please be quiet"); // แสดงข้อความ
     delay(50);
   }
 }
